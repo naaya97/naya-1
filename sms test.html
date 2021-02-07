@@ -10,13 +10,13 @@
      <form action="/https://601bf66d1a9c22001706003a.mockapi.io/api/test/sms" method="POST">
         
              <label>Add Number To list</label>
-             <input type="tel" id="telN" >
-             <input type="button" onclick="addtolist()" value="Add" id="submit"><br>
+             <input type="tel" value="" id="telN" >
+             <input type="button" onclick="addtolist()" value="Add" ><br>
              <label>Phone Number list</label><br>
-             <textarea style="height:150px" id="result"></textarea><br>
+             <textarea style="height:150px" value="listt" id="result"></textarea><br>
              <label>Message Template</label><br>
-             <textarea style="height:150px"></textarea><br>
-             <input type="submit" value="Send">
+             <textarea style="height:150px" value="" id="sms"></textarea><br>
+             <input type="submit" onclick="sendinfo()" value="Send" >
      </form>
      <script src="./sms.js"></script>
 </body>

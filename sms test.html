@@ -3,20 +3,31 @@
 <head>
   <meta charset="utf-8">
   <title>sms test</title>
-  <link rel="testcss" type="text/css" href="testcss.css">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
   
 </head>
 <body>
-     <form action="/https://601bf66d1a9c22001706003a.mockapi.io/api/test/sms" method="POST">
-        
-             <label>Add Number To list</label>
-             <input type="tel" value="" id="telN" >
-             <input type="button" onclick="addtolist()" value="Add" ><br>
-             <label>Phone Number list</label><br>
-             <textarea style="height:150px" value="listt" id="result"></textarea><br>
-             <label>Message Template</label><br>
-             <textarea style="height:150px" value="" id="sms"></textarea><br>
-             <input type="submit" onclick="sendinfo()" value="Send" >
+     <form action="/https://601bf66d1a9c22001706003a.mockapi.io/api/test/sms" method="GET" enctype="application/x-www-form-urlencoded">
+      <div class="ce">
+      <div>
+             <label tabindex="1" for="number">Add Number To list</label>
+             <input tabindex="2" type="tel" name="tel" value="" id="telN" >
+             <input tabindex="3" type="button" onclick="addtolist()" value="Add" >
+        </div>
+        <div>     
+             <label for="list">Phone Number list</label>
+        </div>
+        <div>
+             <textarea tabindex="4" value="phone number" id="result"></textarea>
+        </div>
+        <div>
+             <label>Message Template</label>
+        <div>
+             <textarea tabindex="5" value="message" placeholder="hello" id="sms"></textarea><br>
+        </div>
+        <div>   
+             <input tabindex="6" type="button" onclick="sendinfo()" value="Send" class="left">
+        </div> </div>  
      </form>
      <script src="./sms.js"></script>
 </body>

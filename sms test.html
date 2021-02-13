@@ -7,7 +7,7 @@
   
 </head>
 <body>
-     <form action="/https://601bf66d1a9c22001706003a.mockapi.io/api/test/sms" method="GET" enctype="application/x-www-form-urlencoded">
+     <form method="POST" enctype="application/x-www-form-urlencoded">
       <div class="ce">
       <div>
              <label tabindex="1" for="number">Add Number To list</label>
@@ -18,12 +18,12 @@
              <label for="list">Phone Number list</label>
         </div>
         <div>
-             <textarea tabindex="4" value="phone number" id="result"></textarea>
+             <textarea tabindex="4" value="phoneNumber" name="phoneNumber" id="result"></textarea>
         </div>
         <div>
              <label>Message Template</label>
         <div>
-             <textarea tabindex="5" value="message" placeholder="hello" id="sms"></textarea><br>
+             <textarea tabindex="5" value="messageTemplate" name="messageTemplate" placeholder="hello" id="sms"></textarea><br>
         </div>
         <div>   
              <input tabindex="6" type="button" onclick="sendinfo()" value="Send" class="left">

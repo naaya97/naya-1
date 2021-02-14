@@ -2,7 +2,7 @@ tel:String;
 var x = 0 ;
 var txt = Array();
 sms: String;
-
+//var sp=txt;
 
 function addtolist(){
     txt[0] = document.getElementById("telN").value;
@@ -25,14 +25,15 @@ xhttp.setRequestHeader("Content-Type","application/json");
     }
     };
    let data=JSON.stringify({
-    phoneNumbers:txt.toString(),
-    messageTemplate:this.sms.value,
+    phoneNumbers:txt.toString().split(),
+ messageTemplate:this.sms.value,
     
   
 });
     xhttp.send(data);
     console.log(txt)
 }
+
 
 
 

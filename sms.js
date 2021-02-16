@@ -12,8 +12,7 @@ function addtolist()
      {
     this.tel=document.getElementById("telN");  
 //txt[0] = document.getElementById("telN").value;
-    this.txt=document.getElementById("result").textContent;  
-    document.getElementById("result").textContent= this.txt + this.tel.value +'\n'; 
+    this.txt=document.getElementById("result").textContent = this.txt + this.tel.value +'\n'; 
 //x++;
      }
 function sendinfo() 

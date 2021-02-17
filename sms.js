@@ -1,19 +1,11 @@
 tel:String;
-//*var x = 0 ;
- //**var txt = Array(arrayLength)
- //txt.length = arrayLength; 
 var txt=[];
-
-   //***txt.forEach(function(txx) {
-   //})
-   //**** for (let i = 0; i < txt.length; i++)
-sms: String;
+var x = '';
 function addtolist()
      {
     this.tel=document.getElementById("telN");  
-//txt[0] = document.getElementById("telN").value;
-    this.txt=document.getElementById("result").textContent = this.txt + this.tel.value +'\n'; 
-//x++;
+    this.txt=document.getElementById("result").textContent = this.txt +x + this.tel.value ; 
+    x = '\n';
      }
 function sendinfo() 
          {

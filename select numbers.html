@@ -7,29 +7,36 @@
 <link rel="stylesheet" href="css.css">
   </head>
   <body>
-    <form method="POST" enctype="application/x-www-form-urlencoded">
+    <form method="POST" enctype="application/x-www-form-urlencoded" id="form1">
     <div class="container d-flex justify-content-center">
 
-      <div //1>
+      <div>
 <div>
 <div>
 <label class="text-muted pb-2" for="selectNumbers" style="margin-top: 50%;">Select Numbers To Send</label>
 </div> 
 <div class="table-wrapper-scroll-y my-custom-scrollbar">
+  
 <table class="table table-bordered mb-0" id="empTable">
-<tr>
-   <td width="20%"> <input type="checkbox" name="chk" value="" > </td>
-   <td> <p id="result"> test</p> </td>
+  
+  <tr>
+   <td width="20%"> <input type="checkbox" name="chk" value="" id="id00" > </td>
+   <td> <p> Phone Number 1 </p> <p> 11 11 00 </p> </td>
 </tr>
 <tr>
-  <td width="20%"> <input type="checkbox" name="chk" value=""> </td>
-  <td> <p id="result"> test</p> </td>
+  <td width="20%"> <input type="checkbox" name="chk" value="" id="id00"> </td>
+    <td> <p > Phone Number 2</p>  <p> 22 11 00 </p> </td>
+  </tr>
+<tr>
+  <td width="20%"> <input type="checkbox" name="chk" value="" > </td>
+  <td> <p> Phone Number 3</p>
+    <p> 33 11 00 </p> </td>
 </tr>
 <tr>
   <td width="20%"> <input type="checkbox" name="chk" value="" > </td>
-  <td> <p id="result"> test</p> </td>
+  <td> <p> Phone Number 4 </p>  <p> 44 11 00 </p> </td>
 </tr>
-</table>
+  </table>
 </div> 
 <div>
 <label for="add" class="label text-info pb-3" data-toggle="modal" data-target="#exampleModal">Add new phone number</label>
@@ -64,12 +71,15 @@
 </div>
 
   <div>
-    <a href="html1.html">
-  <input tabindex="2" type="button" value="Next" class="btn btn-success w-100"></a>
+   
+  <input tabindex="2" type="button" value="Next" class="btn btn-success w-100" onclick="addToArray()">
   </div>
-</div //1>
 
-  <div //message>
+
+</div >
+
+  <div>
+    
   <div>
     <label class="text-muted pb-2" for="messageTemplate" style="margin-top: 50%;" >Message Template</label>
     </div> 
@@ -80,22 +90,24 @@
     <div> 
         <p class="text-info" id="checkValue"></p>
         </div>
-
-
+        
     <div>
     <input tabindex="2" type="button" onclick="send()" value="Send" class="btn btn-success w-100">
     </div>
-</div   //message>
+
 
 </div>
+
+
+
 </div>
+</div>   
   
     
   </form>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-    <script src="js.js"></script>
- 
+    <script src="js.js"></script> 
   </body>
 
 </html>

@@ -6,43 +6,13 @@ function addToTable ()
   let newRow =table.insertRow(1);
   let cell = newRow.insertCell(0);
   let cell2 = newRow.insertCell(1);
-  cell2.innerHTML=conName+"\n"+phNumber;
-  let checkb = document.createElement('input');
-  checkb.setAttribute('type', 'checkbox');
-  checkb.setAttribute('value', 'chk');
-  cell.innerHTML=checkb;
+  cell2.innerText=conName+"\n"+phNumber;
+  let element1 = document.createElement("input");
+  element1.type = "checkbox";
+  element1.name="chk";
+  element1.value="";
+  cell.appendChild(element1); 
 }
-
-//convert the table to array
-
-//1
-
-// let tableInfo = Array.prototype.map.call(document.querySelectorAll('empTable'), function(tr){
-   //return Array.prototype.map.call(tr.querySelectorAll('td'), function(td){
-     //return td.innerHTML;
-     //});
-   //});
- 
-
- //2
-   my_liste = [];
-   function table_to_array(empTable) {
-    myData = document.getElementById(empTable).rows
-   
- 
-    for (var i = 0; i < myData.length; i++) {
-            el = myData[i].children
-            my_el = []
-            for (var j = 0; j < el.length; j++) {
-                    my_el.push(el[j].innerText);
-            }
-            my_liste.push(my_el)
-
-    }
-}
-
-
-
 
 
 showChecked();
@@ -59,15 +29,26 @@ function showChecked()
      }
    });
 
+   let arr = [];
+   function addToArray ()
+   {
+     let phNumber=document.getElementById("phoneNumber").value;
+     let conName=document.getElementById("contactName").value;
+     arr.push(conName+phNumber);
+   }
+ 
 
 
   
 
-    function send() 
+
+
+
+   function send() 
 {
   const data=
      {
-  phoneNumbers:my_liste,
+  phoneNumbers:arr ,
   messageTemplate: document.getElementById("mesTe").value,
      };       
   const jsonStr = JSON.stringify(data);

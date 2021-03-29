@@ -3,7 +3,7 @@ function addToTable ()
   let phNumber=document.getElementById("phoneNumber").value;
   let conName=document.getElementById("contactName").value;
   let table=document.getElementsByTagName("table")[0];
-  let newRow =table.insertRow(1);
+  let newRow =table.insertRow(0);
   let cell = newRow.insertCell(0);
   let cell2 = newRow.insertCell(1);
   cell2.innerText=conName+"\n"+phNumber;

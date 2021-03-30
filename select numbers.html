@@ -10,7 +10,7 @@
     <form method="POST" enctype="application/x-www-form-urlencoded" id="form1">
 <div class="container d-flex justify-content-center">
    <div>
-      <div>
+      <div  id="myDIV">
   <div>
 <label class="text-muted pb-2" for="selectNumbers" style="margin-top: 50%;">Select Numbers To Send</label>
   </div> 
@@ -50,10 +50,10 @@
 </div>
 </div>
  <div>
- <input tabindex="2" type="button" value="Next" class="btn btn-success w-100">
+ <input tabindex="2" type="button" value="Next" onclick="myFunction(),showChecked()" class="btn btn-success w-100" data-toggle="collapse"  aria-controls="multiCollapseExample"data-target="#multiCollapseExample" aria-expanded="false" aria-controls="multiCollapseExample">
  </div>
-   </div >
-<div>
+   </div>
+<div id="myDiv2">
   <div>
     <label class="text-muted pb-2" for="messageTemplate" style="margin-top: 50%;" >Message Template</label>
   </div>    
@@ -63,9 +63,10 @@
   <div> 
     <p class="text-info" id="checkValue"></p>
   </div>
-  <div>
+  <div> 
     <input tabindex="2" type="button" onclick="send()" value="Send" class="btn btn-success w-100">
   </div>
+  
 </div>
    </div>
 </div>     

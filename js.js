@@ -27,34 +27,6 @@ function addToTable() {
   conName = "";
 }
 
-
-showChecked();
-function showChecked() {
-  document.getElementById("checkValue").textContent =
-    "Selected phone numbers are : " +
-    document.querySelectorAll("input:checked").length +
-    " Numbers";
-}
-document.querySelectorAll("input[name=chk]").forEach((i) => {
-  i.onclick = function () {
-    showChecked();
-  };
-});
-
-/*
-//Getting all selected checkboxes
-let inputs = document.getElementsByTagName("input");
-let checked = []; //will contain all checkboxes
-// use forEach for looping
-for (let i = 0; i < inputs.length; i++) { 
-    if (inputs[i].checked) {
-      checked.push(inputs[i]);
-    }
-  }
-let nbChecked = checked.length; //number of checkboxes
-document.getElementById("checkValue").innerText="Selected phone numbers are : " + nbChecked +" Numbers";
-*/
-
 function send() {
   const data = {
     phoneNumbers: infoArr ,
@@ -113,3 +85,86 @@ addARowBtn.addEventListener("click", (e) => {
     });
   });
 });
+
+
+
+
+
+
+//Count the number of checked checkboxes
+
+
+//1
+
+/*
+showChecked();
+function showChecked() {
+  document.getElementById("checkValue").textContent =
+    "Selected phone numbers are : " +
+    document.querySelectorAll("input:checked").length +
+    " Numbers";
+}
+document.querySelectorAll("input[name=chk]").forEach((i) => {
+  i.onclick = function () {
+    showChecked();
+  };
+});
+*/
+
+
+
+//2
+
+/*
+function checkboxes(){ 
+let array = []; //will contain all checked checkboxes
+let checkboxes = document.querySelectorAll('input[type=checkbox]:checked')
+
+for (let i = 0; i < checkboxes.length; i++) {
+  if(checkboxes.checked){
+  array.push(checkboxes[i].value)
+  }
+}
+let nbcheck=array.length;   //number of checked checkboxes
+document.getElementById("checkValue").innerHTML="Selected phone numbers are : " + nbcheck +" Numbers";
+}
+
+document.querySelectorAll("input[name=chk]").forEach((i) => {
+  i.onclick = function () {
+    checkboxes();
+  };
+});
+
+
+
+
+
+//3
+
+/*
+
+  let checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+  document.getElementById("checkValue").innerHTML=
+  "Selected phone numbers are : " + checkboxes.length +" Numbers";
+
+*/
+
+
+
+//4
+
+/*
+let inputElems = document.getElementsByName("chk"),
+        count = 0;
+          
+        for (let i=0; i<inputElems.length; i++) {       
+if (inputElems[i].type == "checkbox" && inputElems[i].checked == true) 
+{
+    count++; 
+    
+    document.getElementById("checkValue").innerHTML=
+  "Selected phone numbers are : " + count+" Numbers";
+}
+
+}
+*/
